@@ -10,10 +10,10 @@ function allStorage() {
     while ( i-- ) {
         values.push( localStorage.getItem(keys[i]));
     }
-    for (j = 0; j < values.length; j++) {
-        $(".prev-list").prepend("<button class='prev-city mt-1'>" + values[j] + "</button>");
+    for (i = 0; i < values.length; i++) {
+        $(".prev-list").prepend("<button class='prev-city mt-1'>" + values[i] + "</button>");
     }
-}
+};
 allStorage();
 
 //Clears all local storage items and previous searches from the page.
@@ -59,7 +59,7 @@ $(".search").on("click", function() {
         $(".current-temp").text("Temperature: " + currentTemp.toFixed(1) + " °F");
         $(".current-hum").text("Humidity: " + response.main.humidity + "%");
         $(".current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=3c34658c8e0e9fdb71064b81293a3704&lat=" + lat + "&lon=" + lon;
+        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=9f365d6685d00b379de68970f68fdcb7&lat=" + lat + "&lon=" + lon;
 //This is nested ajax request that gets the UV index but uses longitude and latitude from the previous ajax request to do so.
         $.ajax({
             url: queryURL,

@@ -4,7 +4,7 @@
 }
 
 .forecast-day {
-    background-color: cornflowerblue;
+    background-color: salmon;
     color: whitesmoke;
     margin-left: 3px;
     padding-top: 10px;
@@ -23,7 +23,7 @@ input {
 }
 
 button {
-    background-color: cornflowerblue;
+    background-color: salmon;
     border: 2px solid cornflowerblue;
     color: whitesmoke;
     padding-top: 3px;
