@@ -70,7 +70,7 @@ $(".search").on("click", function() {
         })
     })
 
-//This ajax request collects weather data for the next 5 days (specifically it is grabbing the stays from noon, as opposed to every few hours)
+//This ajax request collects weather data for the next 5 days 
     $.ajax({
         url: queryURL2,
         method: "GET"
