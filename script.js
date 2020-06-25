@@ -39,7 +39,7 @@ $(".search").on("click", function() {
         url: queryURL,
         method: "GET",
         statusCode: {
-            404: function() {
+             function() {
               return;
             }
           }    
@@ -59,7 +59,8 @@ $(".search").on("click", function() {
         $(".current-temp").text("Temperature: " + currentTemp.toFixed(1) + " °F");
         $(".current-hum").text("Humidity: " + response.main.humidity + "%");
         $(".current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=9f365d6685d00b379de68970f68fdcb7&lat=" + lat + "&lon=" + lon;
+        queryURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=465a97c2ba8fa356aa139c5a5ea680d0&lat=" + lat + "&lon=" + lon;
+        
 //This is nested ajax request that gets the UV index but uses longitude and latitude from the previous ajax request to do so.
         $.ajax({
             url: queryURL,
